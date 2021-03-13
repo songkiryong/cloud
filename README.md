@@ -55,6 +55,12 @@
     
    
 * Checkpoint
+  - checkpoint create 부분에서 막힘..
+  
+![image](https://user-images.githubusercontent.com/73922068/111031890-200cf380-844d-11eb-88d5-3ad954cb3d62.png)
+
+  - checkpoint create 제한 : https://github.com/docker/cli/blob/master/experimental/checkpoint-restore.md
+
 * 추가로 가능한 방법 조사
 
 
