@@ -65,6 +65,7 @@
   - log파일
     
     /var/lib/docker/containers/<컨테이너id>/*.log 파일에서 ls,mkdir 등의 로그가 나오지 않음..
+    
     docker exec 명령어로 해당 컨테이너 들어가서 디렉토리를 만들고 위의 경로로 들어가서 확인했을 때 해당 디렉토리가 없음-> 두 개가 서로 다른것
     인지??
     
