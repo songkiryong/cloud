@@ -69,5 +69,7 @@
     docker exec 명령어로 해당 컨테이너 들어가서 디렉토리를 만들고 위의 경로로 들어가서 확인했을 때 해당 디렉토리가 없음-> 두 개가 서로 다른것
     인지??
     
+    Dockerfile 작성법 : https://mino-park7.github.io/docker/2018/12/10/dockerfile/ 
+    
 
 
