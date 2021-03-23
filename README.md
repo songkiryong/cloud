@@ -64,12 +64,26 @@
 * 추가로 가능한 방법 조사
   - log파일
     
-    /var/lib/docker/containers/<컨테이너id>/*.log 파일에서 ls,mkdir 등의 로그가 나오지 않음..
+    Dockerfile 작성법 : https://mino-park7.github.io/docker/2018/12/10/dockerfile/
     
-    docker exec 명령어로 해당 컨테이너 들어가서 디렉토리를 만들고 위의 경로로 들어가서 확인했을 때 해당 디렉토리가 없음-> 두 개가 서로 다른것
-    인지??
+    log를 파싱하는 법 : docker logs <컨테이너id> | cut -d"#" -f2 -s 
     
-    Dockerfile 작성법 : https://mino-park7.github.io/docker/2018/12/10/dockerfile/ 
+    but, 컨테이너id는 인식하지 못함->컨테이너 id를 redirection한 파일을 copy 후, 파싱작업 필요.
+    
+    -> ![image](https://user-images.githubusercontent.com/73922068/112186075-21f06700-8c44-11eb-977a-ebd36d20a53e.png)
+    
+    mkdir은 되지만 ls,exit은 인식불가..
+    
+    위의 작업을 수동이 아닌 자동화 하도록. ( dockerfile 만드는 것 또한 자동화로 할 수 있다면? )
+    
+    log파일을 파싱하려했지만 일정한 규칙이 없었음. ( 추후 다시 확인 )
+    
+    ![image](https://user-images.githubusercontent.com/73922068/112186075-21f06700-8c44-11eb-977a-ebd36d20a53e.png)
+    
+
+    
+    
+    
     
 
 
