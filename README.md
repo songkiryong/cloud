@@ -68,17 +68,29 @@
     
     1. docker logs <컨테이너 id> 를 파싱하는 방법
     
-    : docker logs <컨테이너id> | cut -d"#" -f2 -s 
+      : docker logs <컨테이너id> | cut -d"#" -f2 -s
+      
+      ![image](https://user-images.githubusercontent.com/73922068/112757789-32c72100-9026-11eb-9759-1a4746d7f084.png)
+      
+      : Dockerfile
+      
+      ![image](https://user-images.githubusercontent.com/73922068/112757857-62762900-9026-11eb-9ad6-c6825077eb8f.png)
+      
+      
+
+      
+      
+
     
     
     
-    -> ![image](https://user-images.githubusercontent.com/73922068/112186075-21f06700-8c44-11eb-977a-ebd36d20a53e.png)
+      
     
-    단점 : <컨테이너ID>에 해당하는 컨테이너가 VM에 없을 경우 안됨.
+      단점 : <컨테이너ID>에 해당하는 컨테이너가 VM에 없을 경우 안됨.
     
     2. 컨테이너id-json.log 파일을 파싱하는 방법
     
-    log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
+      log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
     
  
     
