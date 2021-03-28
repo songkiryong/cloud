@@ -66,19 +66,21 @@
     
     Dockerfile 작성법 : https://mino-park7.github.io/docker/2018/12/10/dockerfile/
     
-    log를 파싱하는 법 : docker logs <컨테이너id> | cut -d"#" -f2 -s 
+    1. docker logs <컨테이너 id> 를 파싱하는 방법
     
-    but, 컨테이너id는 인식하지 못함->컨테이너 id를 redirection한 파일을 copy 후, 파싱작업 필요.
+    : docker logs <컨테이너id> | cut -d"#" -f2 -s 
+    
+    
     
     -> ![image](https://user-images.githubusercontent.com/73922068/112186075-21f06700-8c44-11eb-977a-ebd36d20a53e.png)
     
-    mkdir은 되지만 ls,exit은 인식불가..
+    단점 : <컨테이너ID>에 해당하는 컨테이너가 VM에 없을 경우 안됨.
     
-    위의 작업을 수동이 아닌 자동화 하도록. ( dockerfile 만드는 것 또한 자동화로 할 수 있다면? )
+    2. 컨테이너id-json.log 파일을 파싱하는 방법
     
-    log파일을 파싱하려했지만 일정한 규칙이 없었음. ( 추후 다시 확인 )
+    log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
     
-    ![image](https://user-images.githubusercontent.com/73922068/112186075-21f06700-8c44-11eb-977a-ebd36d20a53e.png)
+ 
     
 
     
