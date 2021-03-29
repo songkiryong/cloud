@@ -70,6 +70,11 @@
 
     -> 이미지는 만들어지나, 컨테이너를 생성해보면 script.sh 파일에 아무내용도 적혀있지 않음.
     
+    -> cut 할 때 맨처음 명령어는 안나오는 이유는 log의 첫번째 명령어는 #이 두개임
+    
+    ![image](https://user-images.githubusercontent.com/73922068/112850429-f27aa800-90e4-11eb-88c8-858fc65def16.png)
+
+    
     #2. 외부에서 만든 script.sh 파일을 Dockerfile로 COPY
     
     ![image](https://user-images.githubusercontent.com/73922068/112845679-1687ba80-90e0-11eb-939b-a05a92a58622.png)
