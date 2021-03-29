@@ -66,36 +66,19 @@
     
     #1. docker logs <컨테이너id>
     
-    ![image](https://user-images.githubusercontent.com/73922068/112845230-97928200-90df-11eb-94ef-2ecf389ac0b5.png)
-    
+    ![image](https://user-images.githubusercontent.com/73922068/112845565-f22bde00-90df-11eb-9dac-11bbfa6cbf84.png)
+
     -> 이미지는 만들어지나, 컨테이너를 생성해보면 script.sh 파일에 아무내용도 적혀있지 않음.
     
-    #2. 
+    #2. 외부에서 만든 script.sh 파일을 Dockerfile로 COPY
     
+    ![image](https://user-images.githubusercontent.com/73922068/112845679-1687ba80-90e0-11eb-939b-a05a92a58622.png)
     
-  
-      
-      ![image](https://user-images.githubusercontent.com/73922068/112757789-32c72100-9026-11eb-9759-1a4746d7f084.png)
-      
-      : Dockerfile
-      
-      ![image](https://user-images.githubusercontent.com/73922068/112757857-62762900-9026-11eb-9ad6-c6825077eb8f.png)
-      
-      
-
-      
-      
-
+    -> 이미지 생성 안됨. 대신 컨테이너가 바로 생성됨. 컨테이너는 restart 해도 바로 꺼져버림.
     
+    #2. <컨테이너id>-json.log 파일을 파싱하는 방법
     
-    
-      
-    
-      단점 : <컨테이너ID>에 해당하는 컨테이너가 VM에 없을 경우 안됨.
-    
-    2. 컨테이너id-json.log 파일을 파싱하는 방법
-    
-      log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
+    -> log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
     
  
     
