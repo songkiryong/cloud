@@ -73,15 +73,21 @@
     -> cut 할 때 맨처음 명령어는 안나오는 이유는 log의 첫번째 명령어는 #이 두개임
     
     ![image](https://user-images.githubusercontent.com/73922068/112850429-f27aa800-90e4-11eb-88c8-858fc65def16.png)
-
+    
+    -> script.sh 를 vim 으로 켜서 일일이 ls, mkdir 입력하면 정상적으로 작동함. 하지만, 로그를 파싱하면 이렇게 됨. 
+    
+    ![image](https://user-images.githubusercontent.com/73922068/112851739-3c17c280-90e6-11eb-9494-70c2c1a71ff6.png)
+    
+    -> ^M 제거하는 방법 : https://m.blog.naver.com/helloworld8/221793507644
+    
     
     #2. 외부에서 만든 script.sh 파일을 Dockerfile로 COPY
+      1. ![image](https://user-images.githubusercontent.com/73922068/112854603-fad4e200-90e8-11eb-92d4-f3b37455f6a0.png)
+      2. script.sh : ![image](https://user-images.githubusercontent.com/73922068/112854741-19d37400-90e9-11eb-932a-188778ffa9d1.png)
+      3. script.sh 가 제대로 실행함 : ![image](https://user-images.githubusercontent.com/73922068/112854852-37084280-90e9-11eb-8df2-54bada20a24e.png)
+
     
-    ![image](https://user-images.githubusercontent.com/73922068/112845679-1687ba80-90e0-11eb-939b-a05a92a58622.png)
-    
-    -> 이미지 생성 안됨. 대신 컨테이너가 바로 생성됨. 컨테이너는 restart 해도 바로 꺼져버림.
-    
-    #2. <컨테이너id>-json.log 파일을 파싱하는 방법
+    #3. <컨테이너id>-json.log 파일을 파싱하는 방법
     
     -> log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
     
