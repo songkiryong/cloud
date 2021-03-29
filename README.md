@@ -64,7 +64,7 @@
 * 추가로 가능한 방법 조사
   - log파일
     
-    #1. docker logs <컨테이너id>
+    #1. docker logs <컨테이너id> ( 실패 )
     
     ![image](https://user-images.githubusercontent.com/73922068/112845565-f22bde00-90df-11eb-9dac-11bbfa6cbf84.png)
 
@@ -79,15 +79,15 @@
     ![image](https://user-images.githubusercontent.com/73922068/112851739-3c17c280-90e6-11eb-9494-70c2c1a71ff6.png)
     
     -> ^M 제거하는 방법 : https://m.blog.naver.com/helloworld8/221793507644
+    -> ^M을 제거해 보았지만 여전히 안됨.
     
-    
-    #2. 외부에서 만든 script.sh 파일을 Dockerfile로 COPY
+    #2. 외부에서 만든 script.sh 파일을 Dockerfile로 COPY ( 성공 )
       1. ![image](https://user-images.githubusercontent.com/73922068/112854603-fad4e200-90e8-11eb-92d4-f3b37455f6a0.png)
       2. script.sh : ![image](https://user-images.githubusercontent.com/73922068/112854741-19d37400-90e9-11eb-932a-188778ffa9d1.png)
       3. script.sh 가 제대로 실행함 : ![image](https://user-images.githubusercontent.com/73922068/112854852-37084280-90e9-11eb-8df2-54bada20a24e.png)
 
     
-    #3. <컨테이너id>-json.log 파일을 파싱하는 방법
+    #3. <컨테이너id>-json.log 파일을 파싱하는 방법 ( 미완성 )
     
     -> log파일을 파싱하려했지만 mkdir\r\s 의 \r을 cut명령어로 제거하는 방법을 모르겠음..
     
