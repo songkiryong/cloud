@@ -64,11 +64,16 @@
 * 추가로 가능한 방법 조사
   - log파일
     
-    Dockerfile 작성법 : https://mino-park7.github.io/docker/2018/12/10/dockerfile/
+    #1. docker logs <컨테이너id>
     
-    1. docker logs <컨테이너 id> 를 파싱하는 방법
+    ![image](https://user-images.githubusercontent.com/73922068/112845230-97928200-90df-11eb-94ef-2ecf389ac0b5.png)
     
-      : docker logs <컨테이너id> | cut -d"#" -f2 -s
+    -> 이미지는 만들어지나, 컨테이너를 생성해보면 script.sh 파일에 아무내용도 적혀있지 않음.
+    
+    #2. 
+    
+    
+  
       
       ![image](https://user-images.githubusercontent.com/73922068/112757789-32c72100-9026-11eb-9759-1a4746d7f084.png)
       
